@@ -1,0 +1,202 @@
+/* Customer Dashboard Styles */
+:root {
+    /* Color Palette - Updated to Yellow Theme */
+    --primary-color: #f39c12;     /* Warm yellow for sophistication */
+    --accent-color: #f1c40f;      /* Bright yellow for highlights */
+    --background-color: #ecf0f1;  /* Light gray background */
+    --text-color: #333333;
+    --white: #ffffff;
+    --success-color: #27ae60;     /* Green for positive actions */
+    --danger-color: #e74c3c;      /* Red for critical actions */
+    --neutral-color: #95a5a6;     /* Soft gray for neutral elements */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.customer-dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--white);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.dashboard-logo {
+    max-height: 60px;
+    max-width: 150px;
+    background-image: url('../Logo/Logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dashboard-title {
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.dashboard-welcome {
+    text-align: right;
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* Dashboard Sections Styling */
+#account-info, 
+#loyalty-program, 
+#recent-orders, 
+#recent-reviews, 
+#quick-navigation {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--accent-color);
+    transition: transform 0.3s ease;
+}
+
+#account-info:hover, 
+#loyalty-program:hover, 
+#recent-orders:hover, 
+#recent-reviews:hover, 
+#quick-navigation:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h2, h3 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+table thead {
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #e0e0e0;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+#quick-navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#quick-navigation ul li {
+    margin-bottom: 10px;
+}
+
+#quick-navigation ul li a {
+    display: block;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#quick-navigation ul li a:hover {
+    background-color: var(--accent-color);
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* Logout Link */
+.logout-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    background-color: var(--danger-color);
+    color: var(--white);
+    padding: 12px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.logout-link:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .customer-dashboard {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+}
+
+/* Utility Classes */
+.text-success {
+    color: var(--success-color);
+}
+
+.text-danger {
+    color: var(--danger-color);
+}
+
+.text-neutral {
+    color: var(--neutral-color);
+}
